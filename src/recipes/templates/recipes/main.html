@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+<h1>Product List</h1>
+{% endblock title %}
+
+{% block content %}
+<hr>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" class="btn btn-primary mt-3">search</button>
+</form>
+<hr>
+<br>
+{% for obj in qs %}
+    <div class="card mb-3">
+        <a href="{{obj.get_absolute_url}}" class="card-body"> {{obj.tran_id}}</a>
+        <!-- <a href="{% url 'sales:details' obj.pk %}" class="card-body">{{obj.tran_id}}</a> -->
+    </div>
+{% endfor %}
+{% endblock content %}

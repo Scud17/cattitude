@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+<h1>Unit List</h1>
+{% endblock title %}
+
+{% block content %}
+Unit list
+<br>
+{% for obj in qs %}
+    <ul class="card mb-3">
+        <li><h1> {{obj.name}}</h1></li>
+    </ul>
+{% endfor %}
+{% endblock content %}

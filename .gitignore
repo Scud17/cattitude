@@ -6,13 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
-<<<<<<< HEAD
 Lib/
 Include/
 Scripts/
 
-=======
->>>>>>> 6aa3a679ec3ed495f8910e6893e265d538e0926a
 # Distribution / packaging
 .Python
 build/
